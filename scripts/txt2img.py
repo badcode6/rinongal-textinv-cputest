@@ -119,7 +119,7 @@ if __name__ == "__main__":
     model = load_model_from_config(config, opt.ckpt_path)  # TODO: check path
     model.embedding_manager.load(opt.embedding_path)
 
-    device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+    device = torch.device("cpu")
     model = model.to(device)
 
     if opt.plms:
